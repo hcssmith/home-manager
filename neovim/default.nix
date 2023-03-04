@@ -3,24 +3,20 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-    extraConfig = builtins.readFile ./init.vim;
+    extraLuaConfig = builtins.readFile ./init.lua;
+
     extraPackages = with pkgs; [
       rnix-lsp
     ];
+
     plugins = with pkgs.vimPlugins; [
       vim-nix
-      vim-csharp
-      vim-go
-      vim-airline
-      vim-javascript
-      vim-airline
-      vim-airline-themes
-      vim-fugitive
-      vim-gitgutter
-      NeoSolarized
-      nerdtree
+      telescope-nvim
+      nvim-treesitter
       nvim-lspconfig
-      direnv-vim
+      nvim-tree-lua
+      vim-miranda
+      nvim-web-devicons
     ];
 
   };
