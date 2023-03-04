@@ -26,6 +26,7 @@
           ./neovim
           ./global_packages
           ./hcssmith
+          ./git
         ];
       };
     };
