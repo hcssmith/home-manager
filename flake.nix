@@ -23,6 +23,9 @@
         modules = [
           ./home.nix
           ./bash
+          ./neovim
+          ./global_packages
+          ./hcssmith
         ];
       };
     };
