@@ -7,15 +7,22 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs: {
-    defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
+  outputs = inputs: 
+  let
+    system = "x86_64-linux";
+    pkgs = import inputs.nixpkgs {
+      inherit system;
+    };
+  in
+  {
+    defaultPackage.x86_64-linux = inputs.home-manager.defaultPackage.x86_64-linux;
  
     homeConfigurations = {
       "hcssmith" = inputs.home-manager.lib.homeManagerConfiguration {
-        system = "x86_64-linus";
-        homeDirectory = "/var/home/hcssmith";
-        username = "hcssmith";
-        configuration.imports = [ ./home.nix ];
+        inherit pkgs;
+        modules = [
+          ./home.nix
+        ];
       };
     };
   };

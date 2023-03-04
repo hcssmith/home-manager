@@ -2,6 +2,8 @@
 
 {
   # Home Manager needs a bit of information about you and the
+  home.homeDirectory = "/var/home/hcssmith";
+  home.username = "hcssmith";
   # paths it should manage.
   programs.neovim = {
     enable = true;
@@ -34,6 +36,7 @@
 
   home.packages = with pkgs; [
     odin
+    github-desktop
   ];
 
   # This value determines the Home Manager release that your
