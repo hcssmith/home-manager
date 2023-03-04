@@ -30,10 +30,6 @@
 
   };
 
-  programs.bash = {
-    enable = true;
-  };
-
   home.packages = with pkgs; [
     odin
     github-desktop

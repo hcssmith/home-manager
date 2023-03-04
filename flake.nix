@@ -22,6 +22,7 @@
         inherit pkgs;
         modules = [
           ./home.nix
+          ./bash
         ];
       };
     };
