@@ -7,6 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur.url = "github:nix-community/NUR/master";
     # Set to local path when testing.
     my-nix-overlay = {
       #url = "path:/var/home/hcssmith/Projects/my-nix-overlay";
@@ -20,6 +21,7 @@
     system = "x86_64-linux";
     overlays = [
       inputs.my-nix-overlay.overlay
+      inputs.nur.overlay
     ];
     pkgs = import inputs.nixpkgs {
       inherit system;
