@@ -39,6 +39,7 @@
           ./global_packages
           ./hcssmith
           ./git
+          ./firefox
         ];
       };
     };
