@@ -2,10 +2,6 @@
 {
     programs.firefox = {
         enable = true;
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-            lastpass-password-manager
-            ublock-origin
-        ];
         profiles.hallam = {
             id = 0;
             isDefault = true;
@@ -15,6 +11,10 @@
                 "signon.rememberSignons" = true;
             };
             #userChrome = builtins.readFile ../../config/firefox/chrome.css;
+            extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+                lastpass-password-manager
+                ublock-origin
+            ];
         };
     };
 }
