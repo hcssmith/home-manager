@@ -1,6 +1,6 @@
 {config, pkgs, ...}:
 {
-    firefox = {
+    programs.firefox = {
         enable = true;
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
             lastpass-password-manager
