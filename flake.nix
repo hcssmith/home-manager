@@ -7,6 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Set to local path when testing.
     my-nix-overlay = {
       #url = "path:/var/home/hcssmith/Projects/my-nix-overlay";
       url = "github:hcssmith/my-nix-overlay";
