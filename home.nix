@@ -14,5 +14,16 @@
         type = "github";
       };
     };
+    my-nix-overlay = {
+      from = {
+        id = "my-nix-overlay";
+        type = "indirect";
+      };
+      to = {
+        owner = "hcssmith";
+        repo = "my-nix-overlay";
+        type = "github";
+      };
+    };
   };
 }
