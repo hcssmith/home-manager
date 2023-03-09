@@ -17,6 +17,7 @@
       nvim-tree-lua
       vim-miranda
       nvim-web-devicons
+      odin-vim
     ];
 
   };
