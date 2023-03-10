@@ -39,6 +39,7 @@
         inherit pkgs;
         modules = [
           ./home.nix
+          ./plan9
           ./bash
           ./neovim
           ./global_packages
