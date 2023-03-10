@@ -8,5 +8,7 @@
     dmenu
     terminus_font
     blackbox-terminal
+    plan9port
+	acme-editor
   ];
 }
