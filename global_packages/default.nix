@@ -10,5 +10,6 @@
     blackbox-terminal
     plan9port
 	acme-editor
+	slstatus
   ];
 }
